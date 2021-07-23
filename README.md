@@ -4,7 +4,7 @@ Y ¿cómo vamos a definir el mejor producto? Bueno, eso va a quedar en cada impl
 
 Recuerden enviar sus [PRs](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) y si publican sus webs (una alternativa es usar [GitHub Pages](https://pages.github.com/) suban una foto de su web (y la URL) a Instagran y nos mencionan https://www.instagram.com/apx.school/ para compartirles el proyecto.
 
-## Requistos
+## Requisitos
 Para encarar esta misión necesitan conocimientos básicos de HTML, CSS y Javascript. 
 
 ## Recursos
