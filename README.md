@@ -5,7 +5,12 @@ Y ¿cómo vamos a definir el mejor producto? Bueno, eso va a quedar en cada impl
 Recuerden enviar sus [PRs](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/about-pull-requests) y si publican sus webs (una alternativa es usar [GitHub Pages](https://pages.github.com/) suban una foto de su web (y la URL) a Instagran y nos mencionan https://www.instagram.com/apx.school/ para compartirles el proyecto.
 
 ## Requisitos
-Para encarar esta misión necesitan conocimientos básicos de HTML, CSS y Javascript. 
+Para encarar esta misión necesitan dominio básicos de HTML, CSS y Javascript. Algunos de estos conocimientos básicos son:
+- Fetch: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+- DOM: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+- CSS Grids - https://css-tricks.com/snippets/css/complete-guide-grid/
+- Flexbox - https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+- Semántica - https://developer.mozilla.org/en-US/docs/Glossary/Semantics#semantics_in_html
 
 ## Recursos
 
