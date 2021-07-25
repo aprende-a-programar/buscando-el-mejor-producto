@@ -1,4 +1,4 @@
-_Link pagina_
+https://loreburgi.github.io/buscando-el-mejor-producto/
 
 Hola! soy Lorenzo y les comparto mi resultado del desafio planteado en instagram! Justo este mes estoy cursando el modulo 4 y quise aprovecharlo como una oportunidad para practicar!
 
