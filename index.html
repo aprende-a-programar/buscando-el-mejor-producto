@@ -5,18 +5,64 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>apx - misión - buscando el mejor producto</title>
-    <script defer src="./index.js"></script>
+    <script async src="./index.js"></script>
     <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <header>
-      <form class="search-form"></form>
+    <header class="header">
+      <form class="mi-form">
+        <input
+          class="buscador"
+          type="text"
+          name="producto"
+          placeholder="Encontrá tus productos favoritos"
+        />
+        <button class="boton">Buscar</button>
+      </form>
     </header>
-    <section id="main">
-      <div class="product">
-        <div class="product__image-and-basics"></div>
-        <div class="product__description"></div>
-      </div>
-    </section>
+    <div class="div-content">
+      <h3 class="mejor-resultado-text">El mejor resultado para vos es:</h3>
+      <div class="results"></div>
+    </div>
+    <template id="result-item-template">
+      <a class="link-prod" target="_blank">
+        <div class="result-item">
+          <img
+            src="http://assets.stickpng.com/images/584df3ad6a5ae41a83ddee08.png"
+            alt=""
+            class="result-img"
+          />
+
+          <div class="result-item-content">
+            <h4 class="result-item-title">Title</h4>
+            <p class="result-item-condition-text">
+              Condición: <span class="result-item-condition"></span>
+            </p>
+            <p class="result-item-sell-count">
+              Vendidos: <span class="result-item-sell-count-number"></span>
+            </p>
+          </div>
+          <div class="price-and-shipping">
+            <div class="result-item-price">$1111</div>
+            <div class="shipping">Envio gratis</div>
+          </div>
+        </div>
+      </a>
+    </template>
+    <footer class="footer">
+      <a
+        target="_blank"
+        class="footer-text"
+        href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      >
+        Hecho con ♥ para el desafio mision-codigo</a
+      >
+    </footer>
   </body>
 </html>
