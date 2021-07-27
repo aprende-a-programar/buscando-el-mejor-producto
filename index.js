@@ -35,7 +35,7 @@ function dibujarDescripcion(results) {
   const descriptionEl = template.content.querySelector(
     ".product_description_text"
   );
-  descriptionEl.textContent = results.plain_text;
+  descriptionEl.textContent = results;
 
   const clone = document.importNode(template.content, true);
   contenedor.appendChild(clone);
@@ -48,6 +48,18 @@ function elegirElMejorProducto(listaDeProductos) {
     return Math.max(a, b);
   });
   return maximo;
+}
+function TextAbstract(texto, length) {
+  if (texto == null) {
+    return "";
+  }
+  if (texto.length <= length) {
+    return texto;
+  }
+  texto = texto.substring(0, length);
+  last = texto.lastIndexOf(" ");
+  texto = texto.substring(0, last);
+  return texto + "...";
 }
 
 function buscarProductos() {
@@ -69,7 +81,9 @@ function buscarProductos() {
         fetch(`https://api.mercadolibre.com/items/${id}/description`)
           .then((response) => response.json())
           .then((json) => {
-            dibujarDescripcion(json);
+            const description = json.plain_text;
+            const descripcionResumida = TextAbstract(description, 500);
+            dibujarDescripcion(descripcionResumida);
           });
       });
   });

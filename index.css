@@ -164,6 +164,9 @@
 .footer{
   margin-top:40px;
 }
+
+/*Boton switch cambio de modo light/dark */
+
 .switch{
   position:relative;
   display:inline-block;
