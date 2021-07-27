@@ -14,11 +14,6 @@
 
 .search-form {
   position: relative;
-  max-width: 1064px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .search_input{
@@ -67,12 +62,21 @@
 
 .section {
   margin-top: 64px;
+  display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 24px;
 }
+
+
+
 
 .main_title {
   font-weight: bold;
   font-size: 36px;
   color: #1E222B;
+
 }
 .main_title_dark{
   color: #FDFDFE;
@@ -83,15 +87,10 @@
   border-radius: 15px;
   color: #1E222B;
   text-decoration: none;
+  display: grid;
 }
 .product {
-  margin-top: 24px;
-  padding: 24px;
-  display: grid;
-  grid-template-rows: auto;
-  grid-template-areas: "imagen_basics"
-    "description";
-  row-gap: 34px;
+  max-width:1064px;
 }
 .product_dark a{
   background-color: #38393F;
@@ -107,6 +106,7 @@
     ".  precio"
     ". cuota";
   column-gap: 39px;
+  padding: 24px;
 }
 
 .product_image {
@@ -115,15 +115,10 @@
   border-radius: 8px;
   margin: auto;
   display: flex;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   width: 100%;
-}
-
-.image {
-  margin:auto;
-  width: 50%;
-  height: 50%;
-
 }
 
 .product_title {
@@ -148,7 +143,7 @@
 
 .product__description {
   grid-area: description;
-  padding-right: 108px;
+  padding: 34px;
 }
 
 .product_description_title {

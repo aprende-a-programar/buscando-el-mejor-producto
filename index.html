@@ -11,7 +11,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   </head>
-  <body class="container">
+  <body >
+    <div class="container">
     <header class="header">
         <form class="search-form">
           <input type="search" name="search" id="search" class="search_input" placeholder="Encontrá tus productos favoritos">
@@ -25,9 +26,9 @@
 
       </div>
       <template id= "product_template">
-      <div class="product">
         <a href="" class="product" id="product"target="_blank" rel="noopener noreferrer">
-        <div class="product__image-and-basics">
+        <div class="product">
+                <div class="product__image-and-basics">
           <div class="product_image">
             <img src="./images/tecladoEjemplo.png" alt="teclado" class="image">
           </div>
@@ -41,8 +42,9 @@
           <h3 class="product_description_title">Descripción:</h3>
           <p class="product_description_text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam architecto suscipit neque voluptates praesentium mollitia officia reprehenderit quas ut sequi? Eos vel earum nesciunt. Nesciunt recusandae expedita unde eligendi similique.</p>
         </div>
-      </a>
+      
       </div>
+    </a>
     </template>
     </section>
     <footer class="footer">
@@ -51,5 +53,6 @@
           <span class="slider round"></span>
         </label> 
     </footer>
+  </div>
   </body>
 </html>
