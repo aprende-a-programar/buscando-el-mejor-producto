@@ -61,6 +61,8 @@ async function showResults() {
 		.then((json) => {
 			loader.style.display = 'block';
 			productInformation.style.display = 'none';
+			// bestSelledProducts = [];
+			// sellsQuantity = [];
 			prices = [];
 			resultsTitle = [];
 			coincidences = [];
@@ -72,7 +74,6 @@ async function showResults() {
 					prices.push(results[r].price);
 				}
 			}
-			console.log(coincidences, 'coincidences');
 		})
 		.catch((error) => console.error(error));
 
@@ -82,12 +83,12 @@ async function showResults() {
 		productInformation.style.display = 'none';
 		return false;
 	} else {
+		// getTheMostSelledProduct();
 		getTheCheapestProduct();
 		await fetch(`https://api.mercadolibre.com/items/${bestProductByPrice.id}/description`)
 			.then((response) => response.json())
 			.then((json) => {
 				description = json.plain_text;
-				// deleteHyphens(); /* Para borrar los guiones (?) */
 				description !== '' ? (description = json.plain_text) : (description = 'El vendedor no colocó ninguna descripción');
 				drawTheBestProduct();
 			})
@@ -103,7 +104,6 @@ function getTheCheapestProduct() {
 		bestPrice = coincidences[i].price;
 		if (bestPrice === prices[0]) {
 			bestProductByPrice = coincidences[i];
-			console.log(bestProductByPrice); /* Sold quantity no es el mismo que los vendidos en el articulo (?) */
 			title = bestProductByPrice.title;
 			link = bestProductByPrice.permalink;
 			image = bestProductByPrice.thumbnail;
@@ -125,18 +125,21 @@ function drawTheBestProduct() {
 		productInstallments.innerText = `${installmentsAmount}`;
 	}
 	productDescriptionParagraph.innerText = `${description}`;
+	userQuery = '';
 }
 
-/* Para borrar los guiones (?) */
-// function deleteHyphens() {
-// 	for (let i = 0; i < description.length; i++) {
-// 		if (description[i] === '_') {
-// 			// console.log('chi');
-// 			description[i] = '';
-// 			console.log(description[i]);
-// 		}
-// 	}
-// 	console.log(description);
-// }
-
 // Se eligió el mejor producto dependiendo si era el más barato
+
+// let sellsQuantity = [];
+// let bestSelledProducts = [];
+// function getTheMostSelledProduct() {
+// 	if (coincidences.length > 2) {
+// 		for (let i = 0; i < coincidences.length; i++) {
+// 			if (coincidences[i].sold_quantity > 100) sellsQuantity.push(coincidences[i].sold_quantity);
+// 		}
+// 		sellsQuantity.sort((a, b) => {
+// 			return b - a;
+// 		});
+// 		console.log(sellsQuantity , 'sellsQuantity');
+// 	}
+// }
