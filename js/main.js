@@ -1,7 +1,7 @@
 // --- COSAS QUE ME GUSTARIA MEJORAR --- //
 
-/* - NO SÉ POR QUE LOS GUIONES Y LAS PALABRAS JUNTAS SE VAN DEL CONTORNO */
 /* - NO ENTRA A LOS CATCHS NO SÉ PQ */
+/* - CAPAZ QUE HAY ALGUNA MANERA DE JUNTAR LOS QUE TIENEN MAS VENTAS Y LOS DE MENOR PRECIO PERO NO SÉ */
 
 // ------------------------------------- //
 
@@ -118,8 +118,7 @@ function drawTheBestProduct() {
 	productImageLink.href = `${link}`;
 	productImage.src = `${image}`;
 	productTitle.innerText = `${title}`;
-	if (price)
-		productPrice.innerText = `$${price}`; /* Puse la condición porque busque un articulo que no tenia precio y tiraba precio $null */
+	if (price) productPrice.innerText = `$${price}`; /* Puse la condición porque busque un articulo que no tenia precio y tiraba precio $null */
 	if (bestProductByPrice.installments) {
 		installmentsAmount = `En ${bestProductByPrice.installments.quantity} cuotas de $${bestProductByPrice.installments.amount}`;
 		productInstallments.innerText = `${installmentsAmount}`;
@@ -130,6 +129,30 @@ function drawTheBestProduct() {
 
 // Se eligió el mejor producto dependiendo si era el más barato
 
+/* Dark Mode */
+const buttonSwitch = $('.dark-mode__switch-button');
+
+buttonSwitch.addEventListener('click', () => {
+	document.body.classList.toggle('dark');
+	buttonSwitch.classList.toggle('active');
+
+	// Save the mode in the localStorage
+	if(document.body.classList.contains('dark')){
+		localStorage.setItem('dark-mode', 'true');
+	} else {
+		localStorage.setItem('dark-mode', 'false');
+	}
+});
+
+// Get the actual mode in the localStorage
+if(localStorage.getItem('dark-mode') === 'true'){
+	document.body.classList.add('dark');
+	buttonSwitch.classList.add('active');
+} else {
+	document.body.classList.remove('dark');
+	buttonSwitch.classList.remove('active');
+}
+/* --------- */
 // let sellsQuantity = [];
 // let bestSelledProducts = [];
 // function getTheMostSelledProduct() {

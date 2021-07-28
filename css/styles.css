@@ -8,6 +8,7 @@
 	--onix: #38393f;
 	--spanish-gray: #8f8f8f;
 	--opaque-white: #fdfdfe;
+	--little-grey: #f3f2f2;
 	--white: #ffffff;
 	--light-green: #4efed4;
 	--sandy-brown: #f4a261;
@@ -20,6 +21,10 @@ body {
 	font-family: var(--font-page);
 	text-align: center;
 	background-color: var(--Eerie-Black);
+	transition: 0.3s ease all;
+}
+body.dark {
+	background-color: var(--white);
 }
 h1 {
 	margin: 6rem 0 3rem 0;
@@ -33,9 +38,55 @@ h1 {
 		font-size: 3.2rem;
 	}
 }
+body.dark h1 {
+	color: var(--rich-black);
+}
 /* ################# */
 
 /* ### HEADER #### */
+header button.dark-mode__switch-button {
+	background: var(--sandy-brown);
+	border-radius: 100rem;
+	border: none;
+	position: relative;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	width: 7rem;
+	box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.35);
+}
+header button.dark-mode__switch-button::after {
+	content: '';
+	display: block;
+	width: 3rem;
+	height: 3rem;
+	position: absolute;
+	background: var(--white);
+	top: 0;
+	left: 0;
+	border-radius: 10rem;
+	transition: 0.3s ease all;
+	box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
+}
+header button.dark-mode__switch-button.active {
+	background-color: var(--rich-black);
+}
+header button.dark-mode__switch-button.active::after {
+	right: 0;
+	left: unset;
+}
+header button.dark-mode__switch-button span {
+	width: 3rem;
+	height: 3rem;
+	line-height: 2;
+	display: block;
+	color: var(--Eerie-Black);
+}
+header button.dark-mode__switch-button span i.bxs-moon {
+	color: var(--white);
+}
 header .search-form {
 	position: relative;
 	text-align: left;
@@ -50,6 +101,11 @@ header .search-form input {
 	border: none;
 	border-radius: 5rem;
 	box-shadow: 0 0.5rem 0.5rem 0 rgba(0, 0, 0, 0.35);
+}
+body.dark header .search-form input {
+	background-color: var(--opaque-white);
+	color: var(--rich-black);
+	box-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.25);
 }
 @media (min-width: 768px) {
 	header .search-form input {
@@ -95,6 +151,9 @@ main .product i.bx-spin {
 	font-size: 20rem;
 	display: none;
 }
+body.dark main .product i.bx-spin {
+	color: var(--rich-black);
+}
 main .product .product__information {
 	margin: 2rem 0 4rem 0;
 	padding: 2rem;
@@ -104,6 +163,10 @@ main .product .product__information {
 	border-radius: 1.5rem;
 	letter-spacing: -0.015em;
 	display: none; /* Que aparezca cuando la búsqueda se haya realizado */
+}
+body.dark main .product .product__information {
+	background-color: var(--little-grey);
+	box-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.25);
 }
 main .product__image-and-basics {
 	display: flex;
@@ -158,6 +221,9 @@ main .product__image-and-basics .product__basics {
 		width: 48%;
 	}
 }
+body.dark main .product__image-and-basics .product__basics {
+	color: var(--rich-black);
+}
 main .product__image-and-basics .product__basics h2.product__title {
 	font-size: 3rem;
 	font-weight: 700;
@@ -181,19 +247,25 @@ main .product__image-and-basics .product__basics .product__price {
 		font-size: 4.2rem;
 	}
 }
+body.dark main .product__image-and-basics .product__basics .product__price,
+body.dark main .product__image-and-basics .product__basics .product__installments {
+	color: var(--Eerie-Black);
+}
 main .product__image-and-basics .product__basics .product__installments {
 	font-size: 2.4rem;
 	font-weight: 400;
-	/* color: var(--opaque-white); */
 	color: var(--light-green);
 	opacity: 0.9;
 }
 main .product__description {
 	margin-top: 4rem;
 	text-align: left;
+	color: var(--white);
+}
+body.dark main .product__description {
+	color: var(--rich-black);
 }
 main .product__description h3 {
-	color: var(--white);
 	font-size: 2.8rem;
 	font-weight: 700;
 	line-height: 1.6;
@@ -204,7 +276,6 @@ main .product__description h3 {
 	}
 }
 main .product__description p {
-	color: var(--opaque-white);
 	font-size: 2rem;
 	font-weight: 400;
 	line-height: 1.8;
