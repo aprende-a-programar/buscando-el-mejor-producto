@@ -64,8 +64,8 @@ header button.dark-mode__switch-button::after {
 	height: 3rem;
 	position: absolute;
 	background: var(--white);
-	top: 0;
-	left: 0;
+	top: 0rem;
+	left: 0rem;
 	border-radius: 10rem;
 	transition: 0.3s ease all;
 	box-shadow: 0 0 0.2rem 0.2rem rgba(0, 0, 0, 0.2);
@@ -74,8 +74,8 @@ header button.dark-mode__switch-button.active {
 	background-color: var(--rich-black);
 }
 header button.dark-mode__switch-button.active::after {
-	right: 0;
-	left: unset;
+	right: 0rem;
+	left: 4rem;
 }
 header button.dark-mode__switch-button span {
 	width: 3rem;
