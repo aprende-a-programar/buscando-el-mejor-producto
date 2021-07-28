@@ -59,6 +59,7 @@ function TextAbstract(texto, length) {
   texto = texto.substring(0, length);
   last = texto.lastIndexOf(" ");
   texto = texto.substring(0, last);
+  texto = texto.replaceAll(".-.", "");
   return texto + "...";
 }
 
