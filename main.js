@@ -60,7 +60,7 @@ async function showResults() {
 			results = json.results;
 			for (let r = 0; r < results.length; r++) {
 				resultsTitle.push(results[r].title.toLowerCase());
-				if (resultsTitle[r].includes(userQuery)) {
+				if (resultsTitle[r].includes(userQuery)) { // Hice esto para que la búsqueda sea más especifica
 					coincidences.push(results[r]);
 					prices.push(results[r].price);
 				}
