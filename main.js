@@ -1,10 +1,3 @@
-// --- COSAS QUE ME GUSTARIA MEJORAR --- //
-
-/* - NO ENTRA A LOS CATCHS NO SÉ PQ */
-/* - CAPAZ QUE HAY ALGUNA MANERA DE JUNTAR LOS QUE TIENEN MAS VENTAS Y LOS DE MENOR PRECIO PERO NO SÉ */
-
-// ------------------------------------- //
-
 // --- A way to simplify the selectors to avoid writing them every time i need it --- //
 function $(selector) {
 	return document.querySelector(selector);
@@ -61,8 +54,6 @@ async function showResults() {
 		.then((json) => {
 			loader.style.display = 'block';
 			productInformation.style.display = 'none';
-			// bestSelledProducts = [];
-			// sellsQuantity = [];
 			prices = [];
 			resultsTitle = [];
 			coincidences = [];
@@ -83,7 +74,6 @@ async function showResults() {
 		productInformation.style.display = 'none';
 		return false;
 	} else {
-		// getTheMostSelledProduct();
 		getTheCheapestProduct();
 		await fetch(`https://api.mercadolibre.com/items/${bestProductByPrice.id}/description`)
 			.then((response) => response.json())
@@ -118,7 +108,8 @@ function drawTheBestProduct() {
 	productImageLink.href = `${link}`;
 	productImage.src = `${image}`;
 	productTitle.innerText = `${title}`;
-	if (price) productPrice.innerText = `$${price}`; /* Puse la condición porque busque un articulo que no tenia precio y tiraba precio $null */
+	if (price)
+		productPrice.innerText = `$${price}`; /* Puse la condición porque busque un articulo que no tenia precio y tiraba precio $null */
 	if (bestProductByPrice.installments) {
 		installmentsAmount = `En ${bestProductByPrice.installments.quantity} cuotas de $${bestProductByPrice.installments.amount}`;
 		productInstallments.innerText = `${installmentsAmount}`;
@@ -127,42 +118,25 @@ function drawTheBestProduct() {
 	userQuery = '';
 }
 
-// Se eligió el mejor producto dependiendo si era el más barato
-
-/* Dark Mode */
+// --- Dark Mode --- //
 const buttonSwitch = $('.dark-mode__switch-button');
 
 buttonSwitch.addEventListener('click', () => {
 	document.body.classList.toggle('dark');
 	buttonSwitch.classList.toggle('active');
 
-	// Save the mode in the localStorage
-	if(document.body.classList.contains('dark')){
-		localStorage.setItem('dark-mode', 'true');
-	} else {
-		localStorage.setItem('dark-mode', 'false');
-	}
+	/* Save the mode in the localStorage */
+	document.body.classList.contains('dark')
+		? localStorage.setItem('dark-mode', 'true')
+		: localStorage.setItem('dark-mode', 'false');
 });
 
-// Get the actual mode in the localStorage
-if(localStorage.getItem('dark-mode') === 'true'){
+/* Get the actual mode in the localStorage */
+if (localStorage.getItem('dark-mode') === 'true') {
 	document.body.classList.add('dark');
 	buttonSwitch.classList.add('active');
 } else {
 	document.body.classList.remove('dark');
 	buttonSwitch.classList.remove('active');
 }
-/* --------- */
-// let sellsQuantity = [];
-// let bestSelledProducts = [];
-// function getTheMostSelledProduct() {
-// 	if (coincidences.length > 2) {
-// 		for (let i = 0; i < coincidences.length; i++) {
-// 			if (coincidences[i].sold_quantity > 100) sellsQuantity.push(coincidences[i].sold_quantity);
-// 		}
-// 		sellsQuantity.sort((a, b) => {
-// 			return b - a;
-// 		});
-// 		console.log(sellsQuantity , 'sellsQuantity');
-// 	}
-// }
+// ------------------------------------- //
