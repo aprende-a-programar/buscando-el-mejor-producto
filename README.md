@@ -1,3 +1,6 @@
+# URL
+https://zapaiamarce.github.io/buscando-el-mejor-producto/
+
 # Buscando el mejor producto 
 Para esta misión necesitamos crear una web, usando HTML, CSS y Javascript, que utilice la API de Mercado Libre para buscar entre los resultados el mejor productos. 
 Y ¿cómo vamos a definir el mejor producto? Bueno, eso va a quedar en cada implementación. Cada uno de ustedes que acepte este desafío debe establecer un criterio y elegir entre todos los resultados que les ofrece la API, uno de los resultados y mostrarlo en su webapp. Una vez que elijan el mejor producto simplemente muestran la info básica y linkean al articulo en la web de Mercado Libre.
