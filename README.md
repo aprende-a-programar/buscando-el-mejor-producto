@@ -26,6 +26,6 @@ Este repo tiene algunos archivos que pueden tomar como base pero es totalmente o
 ## Resolución
 Pueden encontrar distintas propuestas de cómo encararlo en los [PRs](https://github.com/apx-mision-codigo/buscando-el-mejor-producto/pulls) y el video de cómo lo resolvimos en Twich:
 
-<a href="https://youtu.be/4WylLaUgsq8?t=352">
+<a href="https://youtu.be/4WylLaUgsq8?t=352" target="_blank">
   <img src="http://i3.ytimg.com/vi/4WylLaUgsq8/maxresdefault.jpg" width="400" />
 </a>
