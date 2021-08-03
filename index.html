@@ -4,19 +4,48 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>apx - misión - buscando el mejor producto</title>
-    <script defer src="./index.js"></script>
+    <title>Document</title>
     <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <script async src="./index.js"></script>
   </head>
   <body>
-    <header>
-      <form class="search-form"></form>
-    </header>
-    <section id="main">
-      <div class="product">
-        <div class="product__image-and-basics"></div>
-        <div class="product__description"></div>
-      </div>
-    </section>
+    <div class="root">
+      <header class="header">
+        <form class="search-form">
+          <input
+            type="text"
+            name="query"
+            placeholder="Encontrá tus productos favoritos"
+            class="search-form__input"
+          />
+          <button type="text" class="search-form__button">Buscar</button>
+        </form>
+      </header>
+      <h2 class="title--h3">El mejor producto para vos es:</h2>
+      <section class="product">
+        <img
+          src="https://i.picsum.photos/id/494/300/300.jpg?hmac=tDkX2VSm6WrTQo4myurqO8cItrg1KLHmF-xQzj-lKs4"
+          class="product__img"
+        />
+        <div class="product__basics">
+          <h1 class="title--h1 product__title">Teclado gamer</h1>
+          <h6 class="product__price">
+            <span class="product__price-currency">$</span>
+            <span class="product__price-amount">1234</span>
+          </h6>
+          <p class="text-body product_inst"></p>
+        </div>
+        <div class="product__desc">
+          <h3 class="title--h3">Descripción</h3>
+          <p class="text-body product__desc-text"></p>
+        </div>
+      </section>
+    </div>
   </body>
 </html>

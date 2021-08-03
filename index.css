@@ -1,8 +1,84 @@
+:root {
+  --primary-color: #51e9d0;
+  --gray-100: #f3f2f2;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+}
+.root {
+  max-width: 1064px;
+  margin: 0 auto;
+}
+.header {
+  margin-bottom: 60px;
+}
 .search-form {
+  border-radius: 30px;
+  background-color: var(--gray-100);
+  padding: 8px;
+  display: flex;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.25);
 }
+.search-form__input {
+  border: none;
+  background-color: transparent;
+  outline: none;
+  font-size: 24px;
+  flex: 1;
+  margin-left: 20px;
+  min-width: 10px;
+}
+.search-form__button {
+  border-radius: 20px;
+  background-color: var(--primary-color);
+  border: none;
+  padding: 6px 18px;
+  font-size: 24px;
+}
+
 .product {
+  display: none;
 }
-.product__image-and-basics {
+.product.show {
+  display: block;
+  cursor: pointer;
 }
-.product__description {
+@media (min-width: 769px) {
+  .product.show {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+  }
+}
+
+.product__img {
+  justify-self: center;
+  align-self: center;
+}
+.product__basics {
+}
+
+.product__price {
+  font-size: 32px;
+}
+
+.product__inst {
+}
+.product__desc {
+  grid-column: 1 / span 2;
+}
+
+/* Textos */
+.text-body {
+}
+.title--h1 {
+}
+
+.title--h3 {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 54px;
+  margin: 0;
 }
