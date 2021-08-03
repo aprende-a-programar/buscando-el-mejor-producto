@@ -22,3 +22,10 @@ https://www.figma.com/file/9c8fPdTHLDZ4h1ZvK0WNg0/misi%C3%B3n-buscando-el-mejor-
 
 #### Código
 Este repo tiene algunos archivos que pueden tomar como base pero es totalmente opcional.
+
+## Resolución
+Pueden encontrar distintas propuestas de cómo encararlo en los [PRs](https://github.com/apx-mision-codigo/buscando-el-mejor-producto/pulls) y el video de cómo lo resolvimos en Twich:
+
+<a href="https://youtu.be/4WylLaUgsq8?t=352">
+  <img src="http://i3.ytimg.com/vi/4WylLaUgsq8/maxresdefault.jpg" width="400" />
+</a>
