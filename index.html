@@ -7,16 +7,52 @@
     <title>apx - misión - buscando el mejor producto</title>
     <script defer src="./index.js"></script>
     <link rel="stylesheet" href="./index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   </head>
-  <body>
-    <header>
-      <form class="search-form"></form>
-    </header>
-    <section id="main">
-      <div class="product">
-        <div class="product__image-and-basics"></div>
-        <div class="product__description"></div>
+  <body >
+    <div class="container">
+      <header class="header">
+        <form class="search-form">
+          <input type="search" name="search" id="search" class="search_input" placeholder="Encontrá tus productos favoritos">
+          <button class="search_button"type="submit"><img src="./images/Vector (Stroke).png" alt="icono buscar" class="search_icon">Buscar</button>  
+        </form>
+      </header>
+      <section id="main" class="section">
+      <h2 class="main_title">El mejor producto para vos es:</h2>
+      <div class="results">
+
+
       </div>
-    </section>
+      <template id= "product_template">
+        <a href="" class="product" id="product"target="_blank" rel="noopener noreferrer">
+        <div class="product">
+                <div class="product__image-and-basics">
+          <div class="product_image">
+            <img src="./images/tecladoEjemplo.png" alt="teclado" class="image">
+          </div>
+          <div class="product_basics">
+            <h3 class="product_title">Teclado gamer bluetooth Redragon Draconic K530</h3>
+            <h4 class="product_price">$7250</h4>
+            <h5 class="product_condition">en 6 cuotas de <span class="product_condition-item">$1310</span></h5>
+          </div>
+        </div>
+        <div class="product__description">
+          <h3 class="product_description_title">Descripción:</h3>
+          <p class="product_description_text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam architecto suscipit neque voluptates praesentium mollitia officia reprehenderit quas ut sequi? Eos vel earum nesciunt. Nesciunt recusandae expedita unde eligendi similique.</p>
+        </div>
+      
+      </div>
+    </a>
+    </template>
+      </section>
+      <footer class="footer">
+        <label id="label" class="switch toggle">
+          <input id="toggle" type="checkbox">
+          <span class="slider round"></span>
+        </label> 
+      </footer>
+  </div>
   </body>
 </html>
