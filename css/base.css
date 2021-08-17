@@ -1,0 +1,27 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+html {
+	font-size: 62.5%; /* Reset para REMS -> 62.5% = 10px de 16px , 1rem = 10px */
+	scroll-behavior: smooth;
+	line-height: 1.15;
+}
+body,
+input,
+button,
+select,
+textarea {
+	font-size: 1.6rem;
+}
+img {
+	max-width: 100%;
+}
+a {
+	text-decoration: none;
+}

@@ -1,22 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>apx - misión - buscando el mejor producto</title>
-    <script defer src="./index.js"></script>
-    <link rel="stylesheet" href="./index.css" />
-  </head>
-  <body>
-    <header>
-      <form class="search-form"></form>
-    </header>
-    <section id="main">
-      <div class="product">
-        <div class="product__image-and-basics"></div>
-        <div class="product__description"></div>
-      </div>
-    </section>
-  </body>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apx - Misión 1 - Buscando el mejor producto</title>
+  <link rel="icon" href="img/search-alt-regular-24.png">
+  <link href='https://unpkg.com/boxicons@2.0.8/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <header>
+    <button class="dark-mode__switch-button">
+      <span>
+        <i class='bx bxs-moon'></i>
+      </span>
+      <span>
+        <i class='bx bxs-sun'></i>
+      </span>
+    </button> <!-- Dark Mode button -->
+    <form class="search-form">
+      <input type="text" class="browser-input" placeholder="Encontrá tus productos favoritos...">
+      <button class="find-product">
+        <i class='bx bx-search'></i>
+        <span>Buscar</span>
+      </button> <!-- Find product button -->
+    </form>
+  </header>
+
+  <main>
+    <div class="product"> 
+      <h1 class="container-width">El mejor producto para vos es:</h1>
+      <i class='bx bx-loader-alt bx-spin bx-flip-horizontal'></i>
+
+      <section class="product__information"> 
+        <div class="product__image-and-basics"> 
+          <a class="product__image" href="" target="_BLANK">
+            <img src="" class="image">
+          </a> <!-- Product image -->
+          <div class="product__basics">
+            <h2 class="product__title"></h2>
+            <span class="product__price"></span> <br>
+            <span class="product__installments"></span>
+          </div> <!-- Product's basics -->
+        </div> <!-- Product's image and basics -->
+        <div class="product__description"> 
+          <h3>Descripción:</h3>
+          <p class="product__description-paragraph"></p>
+        </div> <!-- Product's description -->
+      </section> <!-- Product's information -->
+    </div> <!-- Product's card -->
+  </main>
+
+  <script src="main.js"></script>
+</body>
+
 </html>
